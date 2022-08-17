@@ -8,9 +8,15 @@ function encriptar() {
                                 .replaceAll("u", "ufat");
         document.getElementById("copy").style = "display: inline;";
         document.querySelector("#text1").innerHTML = encriptado;
-        document.getElementById("imagen").style = "display: none"
-        document.getElementById("text2").style = "display: none"
-        document.getElementById("text1").style = "margin-top: 50px"
+        document.getElementById("imagen").style = "display: none";
+        document.getElementById("text2").style = "display: none";
+        document.getElementById("warm").style = "color: #495057;";
+        document.getElementById("text1").style = "margin-top: 50px";
+    } else {
+        document.getElementById("warm").style = "color: red;";
+        document.getElementById("text2").style = "display: inline";
+        document.getElementById("copy").style = "display: none;";
+        document.querySelector("#text1").innerHTML = "Ningún mensaje fue encontrado";
     }
 }
 
@@ -23,9 +29,15 @@ function desencriptar() {
                                 .replaceAll("ai", "a")
                                 .replaceAll("ufat", "u");
     document.getElementById("copy").style = "display: inline;";
-    document.getElementById("text2").style = "display: none"
-    document.getElementById("imagen").style = "display: none"
+    document.getElementById("text2").style = "display: none";
+    document.getElementById("warm").style = "color: #495057;";
+    document.getElementById("imagen").style = "display: none";
     document.querySelector("#text1").innerHTML = desencriptado;
+    } else {
+        document.getElementById("warm").style = "color: red;";
+        document.getElementById("text2").style = "display: inline";
+        document.getElementById("copy").style = "display: none;";
+        document.querySelector("#text1").innerHTML = "Ningún mensaje fue encontrado";
     }
 }
 
